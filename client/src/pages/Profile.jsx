@@ -13,6 +13,7 @@ import {
   signOutUserFailure,
   signOutUserSuccess,
 } from "../redux/user/userSlice";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const fileRef = useRef(null);
@@ -192,9 +193,10 @@ export default function Profile() {
         >
           Update
         </button>
-        <button className="bg-green-600 uppercase border p-3 rounded-lg hover: opacity-95">
+        <Link className="bg-green-700 text-white p-3 rounded-lg text-center uppercase hover:opacity-95" to={"/create-listing"}>Create Listing</Link>
+        {/*<button className="bg-green-700 text-white text-center uppercase p-3 rounded-lg hover: opacity-95">
           Create Listing
-        </button>
+        </button>*/}
       </form>
       <div className="flex justify-between mt-5">
         <span
